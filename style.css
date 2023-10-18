@@ -31,6 +31,8 @@ h1{
     justify-content: center;
 }
 
+
+
 #first-square{
     position: absolute;
     height: 100px;
@@ -57,5 +59,8 @@ h1{
     background-color: aquamarine;
 }
 
+#css-btn:focus + #first-square{
+    display: none;
+}
 
 

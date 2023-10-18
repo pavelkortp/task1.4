@@ -1,4 +1,3 @@
-console.log('click');
 document.getElementById('js-btn').onclick = () => {
     document.getElementById('first-square').remove();
 }
