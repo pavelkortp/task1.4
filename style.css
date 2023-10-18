@@ -6,6 +6,14 @@ body{
     justify-content: center;
 }
 
+h1{
+    color: skyblue;
+}
+
+.hidden{
+    visibility: hidden;
+}
+
 .canvas{
     display: flex;
     justify-content: space-around;
@@ -17,6 +25,12 @@ body{
     height: 95vh;
 }
 
+.canv1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 #first-square{
     position: absolute;
     height: 100px;
@@ -24,15 +38,24 @@ body{
     background-color: black;
 }
 
-#first-btn{
+#css-btn, #js-btn, #css-js-btn{
     position: relative;
     top: 100px;
-    margin-top: 100px;
     cursor: pointer;
-    background-color: aqua;
+    background-color: greenyellow;
     margin-top: 20px;
     height: 40px;
     width: 100px;
     border-radius: 25px;
-    border-radius: 25px;
 }
+
+#js-btn{
+    background-color: salmon;
+}
+
+#css-js-btn{
+    background-color: aquamarine;
+}
+
+
+

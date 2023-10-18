@@ -1,10 +1,8 @@
-document.getElementById('first-btn').onclick = ()=>{
-    
-    let visability = document.getElementById('first-square').checkVisibility();
-    if(visability){
-        document.getElementById('first-square').style.display = 'none';
-    }else{
-        document.getElementById('first-square').style.display = 'block';
-    }
-    
+console.log('click');
+document.getElementById('js-btn').onclick = () => {
+    document.getElementById('first-square').remove();
+}
+
+document.getElementById('css-js-btn').onclick = () => {
+    document.getElementById('first-square').setAttribute('class', 'hidden');
 }
