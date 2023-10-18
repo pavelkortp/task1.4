@@ -14,6 +14,7 @@ h1{
     visibility: hidden;
 }
 
+
 .canvas{
     display: flex;
     justify-content: space-around;
@@ -28,19 +29,21 @@ h1{
 .canv1{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
+    padding-top: 0;
 }
 
 
 
 #first-square{
     position: absolute;
+    top: 120px;
     height: 100px;
     width: 100px;
     background-color: black;
 }
 
-#css-btn, #js-btn, #css-js-btn{
+#css-btn, #js-btn, #css-js-btn, #switch-btn{
     position: relative;
     top: 100px;
     cursor: pointer;
@@ -53,6 +56,10 @@ h1{
 
 #js-btn{
     background-color: salmon;
+}
+
+#switch-btn{
+    background-color: deeppink;
 }
 
 #css-js-btn{
