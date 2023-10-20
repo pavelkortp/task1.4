@@ -22,7 +22,8 @@ h2{
     border-radius: 25px;
     background-color: antiquewhite;
     width: 110em;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
 }
 
 .canv1{
@@ -73,6 +74,25 @@ h2{
     width: 100px;
     margin-left: 10px;
     background-color: black;
+}
+.cursor-tracker{
+    position: absolute;
+    right: 5%;
+    margin-top: -20px;
+}
+
+.rect{
+    flex-direction: column;
+    display: flex;
+    text-align: start;
+    width: 300px;
+    height: 200px;
+    background-color: salmon;
+}
+
+.rect p{
+    font-size: larger;
+    font-weight: bolder;
 }
 
 #yellow-square{

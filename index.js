@@ -61,17 +61,31 @@ rect.onfocus = () => {
 }
 
 // TASK 8
-
-document.getElementById('get-photo').onclick = () =>{
+document.getElementById('get-photo').onclick = () => {
     const links = document.getElementById('photo-link').value.split(/\n/g);
     const imageContainer = document.getElementById('img-container');
     while (imageContainer.firstChild) {
         imageContainer.firstChild.remove();
     }
-    for(let i = links.length-1; i>=0; i--){
+    for (let i = links.length - 1; i >= 0; i--) {
         const img = document.createElement('img');
         img.src = links[i];
         img.style.width = '300px';
         imageContainer.appendChild(img);
     }
 }
+
+//Task 10
+document.onpointermove = (event) => {
+    const p = document.getElementById('tracker');
+    p.innerHTML = `X: ${event.clientX}, Y: ${event.clientY}`;
+}
+
+//TASK 11
+document.getElementById('lang').innerHTML = `Browser language: ${navigator.language}`;
+
+//TASK 12
+navigator.geolocation.getCurrentPosition((pos) => {
+    document.getElementById('geo').innerHTML = `Latitude ${pos.coords.latitude}, Longitude: ${pos.coords.longitude}`;
+});
+
