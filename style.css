@@ -16,8 +16,7 @@ h1{
 
 
 .canvas{
-    display: flex;
-    justify-content: space-around;
+    justify-content: start;
     padding: 1%;
     margin-top: 1%;
     border-radius: 25px;
@@ -28,27 +27,37 @@ h1{
 
 .canv1{
     display: flex;
-    flex-direction: column;
+    flex-direction: row-reverse;
     justify-content: start;
     padding-top: 0;
 }
 
+.canv2{
+    
+}
 
+.square-container{
+    top: 100px;
+    margin-left: 20px;
+    width: 550px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
 
-#first-square{
-    position: absolute;
-    top: 120px;
+.square{
     height: 100px;
     width: 100px;
+    margin-left: 10px;
     background-color: black;
 }
 
-#css-btn, #js-btn, #css-js-btn, #switch-btn{
-    position: relative;
-    top: 100px;
+.btn{
     cursor: pointer;
     background-color: greenyellow;
     margin-top: 20px;
+    margin-left: 20px;
     height: 40px;
     width: 100px;
     border-radius: 25px;
@@ -66,7 +75,7 @@ h1{
     background-color: aquamarine;
 }
 
-#css-btn:focus + #first-square{
+#css-btn:focus + .square-container{
     display: none;
 }
 
