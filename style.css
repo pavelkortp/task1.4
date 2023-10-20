@@ -39,6 +39,21 @@ h2{
     justify-content: start;
 }
 
+.canv6 img{
+    width: 300px;
+    display: block;
+    border-radius: 25px;
+}
+
+.img-container{
+    border: 2px solid black;
+    border-radius: 25px;
+    margin-top: 10px;
+    background-color: white;
+    width: 300px;
+    padding: 0.5%;
+}
+
 
 .square-container{
     top: 100px;
@@ -116,9 +131,11 @@ h2{
 #rect-hider:focus + #green-rect{
     visibility: visible;
 }
+
 #rect-hider:not(:focus) + #green-rect{
     display: none;
 }
+
 
 
 

@@ -61,3 +61,11 @@ rect.oninput = () => {
 rect.onfocus = () => {
     document.getElementById('green-rect').style.visibility = 'visible';
 }
+
+// TASK 8
+
+document.getElementById('get-photo').onclick = () =>{
+    const url = document.getElementById('photo-link').value;
+    const imgFromLink = document.getElementById('link-img');
+    imgFromLink.src = url;
+}
