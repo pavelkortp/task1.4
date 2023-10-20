@@ -6,6 +6,14 @@ body {
     justify-content: center;
 }
 
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+}
+
 h2 {
     color: skyblue;
 }
@@ -24,6 +32,7 @@ h2 {
     width: 110em;
     display: flex;
     flex-direction: column;
+    border: 2px solid gainsboro;
 }
 
 .canv1 {
@@ -47,12 +56,17 @@ h2 {
     margin-top: 20px;
 }
 
-.canv8{
+.canv8 {
     text-align: center;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
+
+.canv9{
+    display: flex;
+}
+
 
 #img-container {
     display: inline-block;
@@ -103,6 +117,27 @@ h2 {
     font-weight: bolder;
 }
 
+
+#out-block{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    width: 200px;
+    height: 150px;
+    cursor: pointer;
+}
+
+#inner-block{
+    position: relative;
+    background-color: crimson;
+    width: 90px;
+    height: 90px;
+    cursor: pointer;
+    border-radius: 90px;
+}
+
 #yellow-square {
     background-color: yellow;
     cursor: pointer;
@@ -138,35 +173,90 @@ h2 {
     background-color: ghostwhite;
 }
 
-.editable-block:active{
+.editable-block:active {
     border: 2px solid aqua;
 }
 
 
 .btn {
+    font-weight: bolder;
     cursor: pointer;
     background-color: greenyellow;
     margin-top: 20px;
     margin-left: 20px;
     height: 40px;
     width: 100px;
+    border: none;
     border-radius: 25px;
+    transition: all 250ms;
+}
+
+.btn:hover {
+    background-color: cornflowerblue;
+    transition: all 250ms;
 }
 
 #js-btn {
+    color: white;
     background-color: salmon;
+    transition: all 250ms;
+}
+
+#js-btn:hover {
+    transition: all 250ms;
+    background-color: white;
+    color: salmon;
 }
 
 #switch-btn {
+    color: white;
     background-color: deeppink;
+    transition: all 250ms;
+}
+
+#switch-btn:hover {
+    transition: all 250ms;
+    color: deeppink;
+    background-color: white;
 }
 
 #css-js-btn {
+    color: white;
     background-color: aquamarine;
+    transition: all 250ms;
+}
+
+#css-js-btn:hover {
+    color: aquamarine;
+    background-color: white;
+    transition: all 250ms;
 }
 
 #css-btn:focus+.square-container {
     display: none;
+}
+
+.up-cont {
+    position: fixed;
+    bottom: 50px;
+    right: 80px;
+    display: flex;
+    justify-content: end;
+    z-index: 200;
+}
+
+
+
+#up-btn {
+    width: 50px;
+    background-color: aqua;
+    bottom: 1px;
+    visibility: hidden;
+}
+
+#up-btn:hover {
+    background-color: aquamarine;
+    border: none;
 }
 
 #show-square {

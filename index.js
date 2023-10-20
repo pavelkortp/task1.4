@@ -118,3 +118,30 @@ window.onload = () => {
     cookie.innerText = document.cookie.split(';').pop().slice(8);
 }
 
+//TASK 14
+const appearsBtn = document.getElementById('up-btn');
+window.onscroll = () => {
+    if (window.scrollY > window.innerHeight / 5) {
+        appearsBtn.style.visibility = 'visible';
+    } else {
+        appearsBtn.style.visibility = 'hidden';
+    }
+}
+
+appearsBtn.onclick = () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+
+// TASK 15
+document.getElementById('out-block').onclick = () => {
+    alert('Outer block');
+}
+
+document.getElementById('inner-block').onclick = (e) => {
+    e.stopPropagation();
+    alert('INNER block');
+}
