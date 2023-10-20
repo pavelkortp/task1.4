@@ -6,7 +6,7 @@ body{
     justify-content: center;
 }
 
-h1{
+h2{
     color: skyblue;
 }
 
@@ -32,9 +32,6 @@ h1{
     padding-top: 0;
 }
 
-.canv2{
-    
-}
 
 .square-container{
     top: 100px;
