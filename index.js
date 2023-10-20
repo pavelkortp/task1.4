@@ -46,9 +46,18 @@ let clickCounter = 0;
 square.onclick = () => {
     clickCounter++;
     alert('Привіт');
-    if(clickCounter>0){
-        square.onclick = ()=>{
+    if (clickCounter > 0) {
+        square.onclick = () => {
             square.remove();
         }
     }
+}
+
+// TASK 7
+const rect = document.getElementById('rect-hider');
+rect.oninput = () => {
+    document.getElementById('green-rect').style.visibility = 'hidden';
+}
+rect.onfocus = () => {
+    document.getElementById('green-rect').style.visibility = 'visible';
 }

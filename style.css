@@ -21,8 +21,8 @@ h2{
     margin-top: 1%;
     border-radius: 25px;
     background-color: antiquewhite;
-    width: 90vw;
-    height: 95vh;
+    width: 110em;
+    height: 95em;
 }
 
 .canv1{
@@ -70,6 +70,14 @@ h2{
     visibility: hidden;
 }
 
+#green-rect{
+    background-color: green;
+    width: 50px;
+    height: 20px;
+    margin-top: 10px;
+    visibility: hidden;
+}
+
 .btn{
     cursor: pointer;
     background-color: greenyellow;
@@ -104,5 +112,13 @@ h2{
 #show-square:hover + #red-square{
     visibility: visible;
 }
+
+#rect-hider:focus + #green-rect{
+    visibility: visible;
+}
+#rect-hider:not(:focus) + #green-rect{
+    display: none;
+}
+
 
 
