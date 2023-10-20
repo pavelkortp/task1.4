@@ -29,7 +29,7 @@ const btn = document.getElementById('selector-btn');
 btn.onclick = () => {
     const input = document.getElementById('selector');
     const items = document.querySelectorAll(input.value);
-    for(let i = items.length-1; i>=0; i--){
+    for (let i = items.length - 1; i >= 0; i--) {
         const e = items.item(i);
         if (e.style.visibility == 'visible') {
             e.style.visibility = 'hidden'
@@ -39,7 +39,7 @@ btn.onclick = () => {
             btn.innerHTML = 'Hide';
         }
     }
-    
+
 }
 
 // TASK 5
@@ -47,7 +47,7 @@ const square = document.getElementById('yellow-square');
 let clickCounter = 0;
 square.onclick = () => {
     clickCounter++;
-    alert('Привіт');
+    alert('Hello');
     if (clickCounter > 0) {
         square.onclick = () => {
             square.remove();
@@ -92,4 +92,29 @@ document.getElementById('lang').innerHTML = `Browser language: ${navigator.langu
 navigator.geolocation.getCurrentPosition((pos) => {
     document.getElementById('geo').innerHTML = `Latitude ${pos.coords.latitude}, Longitude: ${pos.coords.longitude}`;
 });
+
+// TASK 13
+const local = document.getElementById('local');
+const ses = document.getElementById('session');
+const cookie = document.getElementById('cookie');
+
+local.onchange = () => {
+    console.log(local.value);
+    localStorage.setItem('local', local.value);
+}
+
+ses.onchange = () => {
+    sessionStorage.setItem('session', ses.value);
+}
+
+cookie.onchange = () => {
+    document.cookie = `cookie=${cookie.value}`;
+}
+
+
+window.onload = () => {
+    local.innerText = localStorage.getItem('local');
+    ses.innerText = sessionStorage.getItem('session');
+    cookie.innerText = document.cookie.split(';').pop().slice(8);
+}
 
