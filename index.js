@@ -27,13 +27,28 @@ document.getElementById('switch-btn').onclick = () => {
 }
 
 // TASK 4
-document.getElementById('selector-btn').onclick = () => {
+const btn = document.getElementById('selector-btn');
+btn.onclick = () => {
     const input = document.getElementById('selector');
     const item = document.querySelector(input.value);
-    console.log(item);
     if (item.style.visibility == 'visible') {
         item.style.visibility = 'hidden'
+        btn.innerHTML = 'Show';
     } else {
         item.style.visibility = 'visible';
+        btn.innerHTML = 'Hide';
+    }
+}
+
+// TASK 5
+const square = document.getElementById('yellow-square');
+let clickCounter = 0;
+square.onclick = () => {
+    clickCounter++;
+    alert('Привіт');
+    if(clickCounter>0){
+        square.onclick = ()=>{
+            square.remove();
+        }
     }
 }

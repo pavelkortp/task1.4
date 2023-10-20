@@ -50,6 +50,11 @@ h2{
     background-color: black;
 }
 
+#yellow-square{
+    background-color: yellow;
+    cursor: pointer;
+}
+
 .btn{
     cursor: pointer;
     background-color: greenyellow;
