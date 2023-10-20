@@ -11,8 +11,6 @@ document.getElementById('css-js-btn').onclick = () => {
     for (let i = squares.length - 1; i >= 0; i--) {
         squares.item(i).setAttribute('class', 'hidden');
     }
-
-
 }
 
 document.getElementById('switch-btn').onclick = () => {
@@ -65,7 +63,15 @@ rect.onfocus = () => {
 // TASK 8
 
 document.getElementById('get-photo').onclick = () =>{
-    const url = document.getElementById('photo-link').value;
-    const imgFromLink = document.getElementById('link-img');
-    imgFromLink.src = url;
+    const links = document.getElementById('photo-link').value.split(/\n/g);
+    const imageContainer = document.getElementById('img-container');
+    while (imageContainer.firstChild) {
+        imageContainer.firstChild.remove();
+    }
+    for(let i = links.length-1; i>=0; i--){
+        const img = document.createElement('img');
+        img.src = links[i];
+        img.style.width = '300px';
+        imageContainer.appendChild(img);
+    }
 }
