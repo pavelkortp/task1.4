@@ -28,14 +28,18 @@ document.getElementById('switch-btn').onclick = () => {
 const btn = document.getElementById('selector-btn');
 btn.onclick = () => {
     const input = document.getElementById('selector');
-    const item = document.querySelector(input.value);
-    if (item.style.visibility == 'visible') {
-        item.style.visibility = 'hidden'
-        btn.innerHTML = 'Show';
-    } else {
-        item.style.visibility = 'visible';
-        btn.innerHTML = 'Hide';
+    const items = document.querySelectorAll(input.value);
+    for(let i = items.length-1; i>=0; i--){
+        const e = items.item(i);
+        if (e.style.visibility == 'visible') {
+            e.style.visibility = 'hidden'
+            btn.innerHTML = 'Show';
+        } else {
+            e.style.visibility = 'visible';
+            btn.innerHTML = 'Hide';
+        }
     }
+    
 }
 
 // TASK 5
