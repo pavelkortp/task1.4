@@ -145,3 +145,20 @@ document.getElementById('inner-block').onclick = (e) => {
     e.stopPropagation();
     alert('INNER block');
 }
+
+//Task 16
+document.getElementById('blocker').onclick = () => {
+    const block = document.createElement('div');
+    block.setAttribute('id', 'blocker-rect');
+
+    const body = document.querySelector('body');
+    body.appendChild(block);
+    body.style.overflow = 'hidden';
+
+    block.onclick = () => {
+        block.remove();
+        body.style.overflow = 'visible';
+    }
+}
+
+

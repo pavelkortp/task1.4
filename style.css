@@ -196,6 +196,22 @@ h2 {
     transition: all 250ms;
 }
 
+#blocker{
+    font-size: larger;
+    font-weight: bold;
+    border: 1px solid #44c071;
+    color: #44c071;
+    background-color: white;
+    transition: all 250ms;
+    height: 80px;
+    width: 150px;
+}
+
+#blocker:hover{
+    color: white;
+    background-color: #44c071;
+}
+
 #js-btn {
     color: white;
     background-color: salmon;
@@ -274,4 +290,14 @@ h2 {
 
 #rect-hider:not(:focus)+#green-rect {
     display: none;
+}
+
+#blocker-rect{
+    position: absolute;
+    cursor: pointer;
+    width: 100vw;
+    height: 300vh;
+    background-color: grey;
+    opacity: 0.2;
+    z-index: 300;
 }
