@@ -162,3 +162,43 @@ document.getElementById('blocker').onclick = () => {
 }
 
 
+//TASK 17
+document.getElementById('no-reload').onsubmit = (event) => {
+    event.preventDefault();
+}
+
+
+//TASK 18
+const dropZone = document.getElementById("drop-zone");
+const label = document.getElementById('label');
+
+const highlight = () => {
+    dropZone.classList.add('dropped');
+}
+const unhighlight = () => {
+    dropZone.classList.remove('dropped');
+}
+
+dropZone.ondragenter = highlight;
+dropZone.ondragover = highlight;
+dropZone.ondragleave = () => {
+    if (document.getElementById('inp').value !== null){
+        highlight();
+    }
+    unhighlight();
+};
+dropZone.ondrop = highlight;
+
+dropZone.onchange = () => {
+    label.innerText = 'Selected succsessfully';
+    highlight();
+}
+
+
+
+
+
+
+
+
+

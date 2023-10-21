@@ -63,7 +63,7 @@ h2 {
     justify-content: space-around;
 }
 
-.canv9{
+.canv9 {
     display: flex;
 }
 
@@ -118,7 +118,7 @@ h2 {
 }
 
 
-#out-block{
+#out-block {
     position: relative;
     display: flex;
     align-items: center;
@@ -129,7 +129,7 @@ h2 {
     cursor: pointer;
 }
 
-#inner-block{
+#inner-block {
     position: relative;
     background-color: crimson;
     width: 90px;
@@ -196,7 +196,7 @@ h2 {
     transition: all 250ms;
 }
 
-#blocker{
+#blocker {
     font-size: larger;
     font-weight: bold;
     border: 1px solid #44c071;
@@ -207,7 +207,7 @@ h2 {
     width: 150px;
 }
 
-#blocker:hover{
+#blocker:hover {
     color: white;
     background-color: #44c071;
 }
@@ -263,6 +263,47 @@ h2 {
 
 
 
+.drop-wrapper input{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 400px;
+    opacity: 0;
+}
+
+.drop-wrapper label {
+    color: gray;
+    font-size: 40px;
+}
+
+.drop-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 400px;
+    background-color: white;
+    border: 2px dashed #44c071;
+    border-radius: 10px;
+}
+
+.drop-wrapper:hover {
+    background-color: rgb(232, 243, 253);
+    border-color: deepskyblue;
+}
+
+.dropped{
+    border:2px solid blue;
+    background-color: deepskyblue;
+    transition: all .25s;
+}
+
+
+
+
 #up-btn {
     width: 50px;
     background-color: aqua;
@@ -292,7 +333,7 @@ h2 {
     display: none;
 }
 
-#blocker-rect{
+#blocker-rect {
     position: absolute;
     cursor: pointer;
     width: 100vw;
